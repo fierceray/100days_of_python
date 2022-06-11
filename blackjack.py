@@ -88,8 +88,7 @@ while 'y' == input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
     #Player get one card
     player_cards.append(random.choice(cards))
     player_sum = sum(player_cards)
-    print(f"  Your cards: {player_cards}, current score: {player_sum}")
-    print(f"  Computer's first card: {dealer_first_card}")
+    
     #if the sum is larger than 21
     if player_sum > 21:
       #if there is 'Ace', then replace it with 1 point.
@@ -102,6 +101,10 @@ while 'y' == input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
         print(f"  Computer's final hand: {dealer_cards}, final score: {dealer_sum}")
         print("You went over. You lose 😤")
         break
+        
+    print(f"  Your cards: {player_cards}, current score: {player_sum}")
+    print(f"  Computer's first card: {dealer_first_card}")
+    
   else:
     #dealer's turn
     #if dealer's sum is less than 17, then mandate to take card.
@@ -138,4 +141,7 @@ while 'y' == input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
       else:
         print(f"  Your final hand: {player_cards}, final score: {player_sum}")
         print(f"  Computer's final hand: {dealer_cards}, final score: {dealer_sum}")
-        print("You win 😃")
+        if player_sum == 21:
+          print("You win BLACK JACK 😃😃")
+        else:
+          print("You win 😃")

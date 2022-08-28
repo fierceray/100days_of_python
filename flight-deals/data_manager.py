@@ -2,8 +2,7 @@ import requests
 
 
 ENDPOINT_sheety = 'https://api.sheety.co/39076523cfe1a047a0a40f52ffaa5ec8/flightDeals/prices'
-TOKEN = 'FLIGHTAWARE'
-
+TOKEN = 'app used to track flight, all in capital'
 
 class DataManager:
     #This class is responsible for talking to the Google Sheet.
